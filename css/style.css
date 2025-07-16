@@ -1,0 +1,12 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: url("../assets/header-bg.jpg") center/cover no-repeat;
+}
+
+table th, table td {
+  vertical-align: middle;
+}
