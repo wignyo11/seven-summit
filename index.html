@@ -2,19 +2,46 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Pendakian Gunung Seven Summits</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artikel Pendakian Gunung Seven Summits</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <style>
-    section h2 .badge { font-size: 0.8rem; }
-    .highlight { background: #fffae6; padding: 0.5rem; border-radius: 0.25rem; }
+    :root {
+      --highlight-bg: #fffae6;
+      --primary-color: #0d6efd;
+      --light-bg: #f8f9fa;
+    }
+    body {
+      line-height: 1.6;
+    }
+    .badge-info {
+      background-color: var(--primary-color);
+    }
+    .highlight {
+      background: var(--highlight-bg);
+      padding: .75rem;
+      border-radius: .25rem;
+      margin-bottom: 1rem;
+    }
+    .card-header .btn {
+      text-decoration: none;
+      color: #212529;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: none;
+      z-index: 100;
+    }
   </style>
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">Seven Summits</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -23,164 +50,171 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#overview">Apa itu?</a></li>
-          <li class="nav-item"><a class="nav-link" href="#list">Daftar Gunung</a></li>
+          <li class="nav-item"><a class="nav-link" href="#list">Daftar</a></li>
           <li class="nav-item"><a class="nav-link" href="#history">Sejarah</a></li>
-          <li class="nav-item"><a class="nav-link" href="#permits">Perizinan & Biaya</a></li>
+          <li class="nav-item"><a class="nav-link" href="#permits">Izin & Biaya</a></li>
           <li class="nav-item"><a class="nav-link" href="#equipment">Perlengkapan</a></li>
           <li class="nav-item"><a class="nav-link" href="#training">Latihan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#records">Rekor & Tokoh</a></li>
+          <li class="nav-item"><a class="nav-link" href="#records">Rekor</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="bg-primary text-white text-center py-5">
-    <h1>Pendakian Gunung Seven Summits</h1>
-    <p class="lead">Tantangan tertinggi dari 7 benua dunia</p>
+  <!-- Hero Section -->
+  <header class="bg-light text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Artikel: Pendakian Gunung Seven Summits</h1>
+      <p class="lead mb-4">Mengenal tantangan tertinggi di tujuh benua dunia</p>
+      <a href="#overview" class="btn btn-primary btn-lg">Mulai Membaca <i class="fas fa-mountain ms-2"></i></a>
+    </div>
   </header>
 
-<img src="assets/Seven-Summits.png"
-     class="img-fluid rounded shadow"
-     alt="Gambar Gunung Seven Summits">
-  
-  <!-- Konten -->
   <main class="container my-5">
-
     <!-- Overview -->
     <section id="overview" class="mb-5">
-      <h2>🌍 Apa itu Seven Summits?</h2>
-      <p>
-        <strong>Seven Summits</strong> adalah tantangan mendaki tujuh puncak tertinggi di masing-masing benua:
-        Asia, Amerika Selatan, Amerika Utara, Afrika, Eropa, Antartika, dan Oceania.
-      </p>
-      <p class="highlight">
-        Menyelesaikan ketujuh pendakian ini dianggap sebagai salah satu pencapaian terbesar dalam dunia pendakian gunung.
-      </p>
+      <h2 class="h3 mb-3">🌍 Apa itu Seven Summits?</h2>
+      <div class="highlight">
+        Menyelesaikan tujuh puncak tertinggi di masing-masing benua dianggap sebagai puncak prestasi dalam pendakian gunung.
+      </div>
+      <p>Seven Summits adalah rangkaian puncak gunung tertinggi di Asia (Everest), Amerika Selatan (Aconcagua), Amerika Utara (Denali), Afrika (Kilimanjaro), Eropa (Elbrus), Antartika (Vinson Massif), dan Oceania (Carstensz Pyramid). Tantangan ini pertama kali dipopulerkan oleh Richard Bass dan Reinhold Messner pada pertengahan 1980-an.</p>
     </section>
 
     <!-- List of Mountains -->
     <section id="list" class="mb-5">
-      <h2>📌 Daftar Gunung Seven Summits</h2>
+      <h2 class="h3 mb-3">📌 Daftar Seven Summits</h2>
       <div class="table-responsive">
-        <table class="table table-bordered table-striped">
-          <thead class="table-dark">
-            <tr>
-              <th>#</th><th>Gunung</th><th>Benua</th><th>Tinggi (m)</th><th>Negara</th><th>Musim Ideal</th>
-            </tr>
+        <table class="table table-hover align-middle">
+          <thead class="table-primary">
+            <tr><th>#</th><th>Gunung</th><th>Benua</th><th>Tinggi (m)</th><th>Lokasi</th><th>Waktu Ideal</th></tr>
           </thead>
           <tbody>
             <tr><td>1</td><td>Everest</td><td>Asia</td><td>8.848</td><td>Nepal/Tibet</td><td>Mei</td></tr>
             <tr><td>2</td><td>Aconcagua</td><td>Amerika Selatan</td><td>6.961</td><td>Argentina</td><td>Des–Feb</td></tr>
-            <tr><td>3</td><td>Denali (McKinley)</td><td>Amerika Utara</td><td>6.190</td><td>AS (Alaska)</td><td>Mei–Jul</td></tr>
+            <tr><td>3</td><td>Denali</td><td>Amerika Utara</td><td>6.190</td><td>Alaska, AS</td><td>Mei–Jul</td></tr>
             <tr><td>4</td><td>Kilimanjaro</td><td>Afrika</td><td>5.895</td><td>Tanzania</td><td>Jan–Mar, Jun–Okt</td></tr>
             <tr><td>5</td><td>Elbrus</td><td>Eropa</td><td>5.642</td><td>Rusia</td><td>Mei–Jul</td></tr>
             <tr><td>6</td><td>Vinson Massif</td><td>Antartika</td><td>4.892</td><td>Antartika</td><td>Nov–Des</td></tr>
-            <tr><td>7</td><td>Puncak Jaya<br>(Carstensz Pyramid)</td><td>Oceania</td><td>4.884</td><td>Indonesia (Papua)</td><td>Apr–Jun</td></tr>
+            <tr><td>7</td><td>Carstensz Pyramid</td><td>Oceania</td><td>4.884</td><td>Papua, Indonesia</td><td>Apr–Jun</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- History -->
-    <section id="history" class="mb-5">
-      <h2>📜 Sejarah & Versi</h2>
-      <p>
-        Dua versi utama Seven Summits:
-        <ul>
-          <li><strong>Versi Bass</strong> (1985): menggunakan <em>Mount Kosciuszko</em> untuk Oceania.</li>
-          <li><strong>Versi Messner</strong> (1986): menggantikan dengan <em>Carstensz Pyramid</em> untuk tantangan teknis lebih tinggi.</li>
-        </ul>
-      </p>
-      <p>
-        <strong>Richard Bass</strong> adalah orang pertama yang menyelesaikan versi Bass pada Juni 1985.
-        Kemudian <strong>Reinhold Messner</strong> mempopulerkan versi Carstensz dengan penaklukan puncak tersebut pada 1986.
-      </p>
-    </section>
-
-    <!-- Permits & Cost -->
-    <section id="permits" class="mb-5">
-      <h2>📝 Perizinan & Biaya</h2>
-      <ul>
-        <li><strong>Everest:</strong> biaya izin ~11.000 USD per pendaki.</li>
-        <li><strong>Denali:</strong> izin nasional + logistik ~5.000 USD.</li>
-        <li><strong>Vinson Massif:</strong> logistik Antartika sangat mahal, bisa >30.000 USD.</li>
-      </ul>
-      <p>
-        Biaya total untuk menyelesaikan Seven Summits bisa mencapai <strong>50.000–100.000 USD</strong>, tergantung rute,
-        musim, dan dukungan perusahaan ekspedisi.
-      </p>
-    </section>
-
-    <!-- Equipment -->
-    <section id="equipment" class="mb-5">
-      <h2>🎒 Perlengkapan Utama</h2>
-      <ul>
-        <li>Sepatu gunung tinggi dengan crampon-compatible</li>
-        <li>Jaketan insulated (down/sintetis)</li>
-        <li>Sleeping bag hingga -30°C</li>
-        <li>Tenda all-season</li>
-        <li>Alat navigasi (GPS, peta, kompas)</li>
-        <li>Peralatan panjat es (ice axe, crampons, harness, carabiner)</li>
-      </ul>
-    </section>
-
-    <!-- Training -->
-    <section id="training" class="mb-5">
-      <h2>🏋️ Latihan & Persiapan</h2>
-      <ul>
-        <li>Latihan kardio intensif (lari, bersepeda) 5x/minggu</li>
-        <li>Latihan kekuatan tubuh inti dan kaki (squat, lunges)</li>
-        <li>Latihan hiking panjang dengan beban ransel</li>
-        <li>Pelatihan eksposur dingin (cold shower, gym dingin)</li>
-      </ul>
-      <p>
-        Disarankan mengikuti kursus gunung es dan navigation sebelum ekspedisi utama.
-      </p>
-    </section>
-
-    <!-- Records & Notable Climbers -->
-    <section id="records" class="mb-5">
-      <h2>🏆 Rekor & Tokoh Penting</h2>
-      <ul>
-        <li><strong>Richard Bass</strong> – penyelesai pertama versi Bass (Juni 1985).</li>
-        <li><strong>Reinhold Messner</strong> – pertama kali selesaikan versi Carstensz (1986).</li>
-        <li><strong>Melissa Arnot</strong> – pendaki wanita tanpa oksigen di Everest (2016).</li>
-        <li><strong>Fransiska Dimitri & Mathilda Dwi Lestari</strong> – duo Indonesia penyelesaian penuh (2024).</li>
-      </ul>
-    </section>
-
-    <!-- Safety & Tips -->
-    <section class="mb-5">
-      <h2>⚡ Tips Keselamatan & Manajemen Risiko</h2>
-      <ol>
-        <li>Lakukan aklimatisasi bertahap, jangan buru-buru.
-          <ul><li>Istirahat dan turunkan ketinggian jika gejala AMS muncul.</li></ul>
-        </li>
-        <li>Bawa obat ketinggian (acetazolamide) dan kit P3K lengkap.</li>
-        <li>Ikuti instruksi pemandu berlisensi.</li>
-        <li>Periksa prakiraan cuaca harian.</li>
-      </ol>
-    </section>
-
-    <!-- References -->
-    <section class="mb-5">
-      <h2>📚 Referensi & Sumber</h2>
-      <ul>
-        <li>Encyclopedia of Mountaineering, 2022.</li>
-        <li>National Geographic: "Seven Summits Challenge".</li>
-        <li>Jurnal Ilmiah: Aklimatisasi pada Ketinggian Ekstrem.</li>
-      </ul>
-    </section>
-
+    <!-- Collapsible Sections for Details -->
+    <div class="accordion" id="detailsAccordion">
+      <!-- History -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingHistory">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory">
+            📜 Sejarah & Versi Seven Summits
+          </button>
+        </h2>
+        <div id="collapseHistory" class="accordion-collapse collapse show" data-bs-parent="#detailsAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Versi Bass</strong> (1985): Menggunakan Gunung Kosciuszko untuk Oceania.</li>
+              <li><strong>Versi Messner</strong> (1986): Memprioritaskan Carstensz Pyramid untuk tantangan teknis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Permits & Cost -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPermits">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePermits">
+            📝 Perizinan & Biaya Ekspedisi
+          </button>
+        </h2>
+        <div id="collapsePermits" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+          <div class="accordion-body">
+            <p>Biaya izin bisa sangat bervariasi, mulai 5.000–30.000 USD per gunung, tergantung lokasi dan logistik. Total rangkaian Seven Summits sering menembus 50.000–100.000 USD.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Equipment -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEquipment">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEquipment">
+            🎒 Perlengkapan Utama
+          </button>
+        </h2>
+        <div id="collapseEquipment" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Sepatu mountaineering dengan crampon-compatible</li>
+              <li>Down jacket dan insulated layers</li>
+              <li>Tenda all-season dan sleeping bag -30°C</li>
+              <li>Alat panjat es: ice axe, harness, carabiner</li>
+              <li>Navigasi: GPS, kompas, peta topografi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Training -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTraining">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTraining">
+            🏋️ Latihan & Persiapan
+          </button>
+        </h2>
+        <div id="collapseTraining" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Kardio intensif (lari, bersepeda) minimal 5x/minggu</li>
+              <li>Latihan kekuatan otot inti dan kaki (squat, lunges)</li>
+              <li>Hiking panjang dengan beban bertahap</li>
+              <li>Adaptasi dingin: cold shower, gym ber-AC rendah</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Records -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRecords">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecords">
+            🏆 Rekor & Tokoh Penting
+          </button>
+        </h2>
+        <div id="collapseRecords" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Richard Bass – penyelesai pertama versi Bass (Juni 1985)</li>
+              <li>Reinhold Messner – pionir Carstensz Pyramid (1986)</li>
+              <li>Fransiska & Mathilda – duo Indonesia penyelesai Seven Summits (2024)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    &copy; 2025 Pendakian Seven Summits - Website Dibuat Oleh Difa Ilham Bintama
+    <small>&copy; 2025 Seven Summits Indonesia. Develop by Difa Ilham Bintama.</small>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    // Back to top
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>
